@@ -86,16 +86,21 @@ h1, h2, h3, h4, h5, h6, p, button, a, pre {
     margin: 5px;
 }
 
-.grade-list {
+.grade-list, .unit-list {
     margin-bottom: 15px;
 }
 
-.grade p {
+.grade p, .unit p {
     padding: 0px;
 }
 
 .equation-table {
     border:1px solid black;
+}
+
+.implemented {
+    font-weight: bold;
+    color: #0000FF;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
