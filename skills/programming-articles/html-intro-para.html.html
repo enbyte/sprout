@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<h1> Learn: Programming </h1>
+<h3> Display Text on the Web </h3>
+
+{% include prog_notice.html %}
+<p>The most essential part of a webpage is its text. You might not notice it, but almost every website you visit is mostly made out of text. Today, we're going to learn how to write code that displays text on your very own website.</p>
+
+<p>To add text to a webpage, we use the &lt;p> tag. In HTML (the language of the web), every piece of code starts with an opening tag and ends with a closing tag. A closing tag is the same as the opening tag except there is a slash in it, like this: &lt;/p>.</p>
+
+{%
+    include miniquiz.html
+        id=0
+        question="What is the closing tag for &lt;strong>?"
+        correctIndex=1
+        opt0="&lt;strong>"
+        opt1="&lt;/strong>"
+        opt2="Nothing"
+        opt3="&lt;\strong>"
+        response0="The closing tag has an extra slash in it. Try again!"
+        response1="Correct!"
+        response2="In HTML, you must pair an opening tag with a closing tag. Try again!"
+        response3="This is close, but the wrong slash is used. Try again!"
+ %}
+
+ <p>Now, we're going to write our first line of code! At the bottom of the workspace, write the following code:</p>
+
+ <pre>&lt;p>Hello, world! I am now a coder!&lt;/p></pre>
+
+ <p>Awesome work there! Now, change the message to "My name is ..." and see your name appear on your very own website!</p>
+
+ <pre>&lt;p>My name is ...&lt;/p></pre>
+
+<p>Super cool! Finally, let's add another &lt/p> below this one. In this new &lt;p>, write your favorite food:</p>
+
+<pre>&lt;p>My name is ...&lt;/p><br/>&lt;p>My favorite food is ...&lt;/p></pre>
+
+
+{% include workspace.html %}
+
+{% include return_prog.html %}
