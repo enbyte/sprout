@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<h1> Learn: Grade 1 </h1>
+<h3> N1.3: Solve operations using whole numbers </h3>
+
+<p>Let's look at the first five numbers:<br/>
+1, 2, 3, 4, 5</p>
+
+<p>We can do something called <em>add</em> these numbers. For example, 1 + 1 is 2 and 1 + 2 is 3.</p>
+
+{%
+    include definition.html
+        term="Add/Plus"
+        definition="Combine two numbers to make a bigger number."
+%}
+
+<p>We can also <em>subtract</em> them. For example, 4 - 1 is 3, and 5 - 1 is 4.</p>
+
+
+{%
+    include definition.html
+        term="Subtract/Minus"
+        definition="Combine two numbers to make a bigger number."
+%}
+
+<p>Here is the full list of <em>additions</em>:</p>
+
+<table class="equation-table">
+<tr>
+  <th>Equation</th>
+  <th>Answer</th>
+</tr>
+ <tr>
+   <th>1 + 1</th>
+   <td>2</td>
+ </tr>
+ <tr>
+   <th>1 + 2</th>
+   <td>3</td>
+ </tr>
+ <tr>
+     <th>1 + 3</th>
+     <td>4</td>
+ </tr>
+ <tr>
+     <th>1 + 4</th>
+     <td>5</td>
+ </tr>
+ <tr>
+     <th>2 + 2</th>
+     <td>4</td>
+ </tr>
+ <tr>
+     <th>2 + 3</th>
+     <td>5</td>
+ </tr>
+ <tr>
+     <th>4 + 1</th>
+     <td>5</td>
+ </tr>
+</table>
+
+<p>Now, let's do a quick practice! First, let's try adding.</p>
+
+{%
+    include miniquiz.html
+        id=0
+        question="What is 3 + 1?"
+        correctIndex=2
+        opt0="2"
+        opt1="3"
+        opt2="4"
+        opt3="5"
+        response0="Oops! That is 3 <strong>-</strong> 1. Try again!"
+        response1="This is the number 3, but not 3 + 1. Try again!"
+        response2="Awesome job! 3 + 1 is 4."
+        response3="This is what you get when you do 4 + 1, but not 3 + 1. Try again!"
+ %}
+
+ <p>Now, we'll try subtracting.</p>
+
+ {%
+     include miniquiz.html
+         id=1
+         question="What is 3 - 1?"
+         correctIndex=2
+         opt0="2"
+         opt1="3"
+         opt2="4"
+         opt3="5"
+         response0="Awesome job! 3 - 1 is 2."
+         response1="This is the number 3, but not 3 - 1. Try again!"
+         response2="Oops! That is 3 <strong>+</strong> 1. Try again!"
+         response3="This is not 3 - 1. Try again!"
+  %}
+
+{% include math-notice.html %}
+{% include return_math.html %}
