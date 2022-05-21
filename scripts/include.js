@@ -22,3 +22,7 @@ function insert(key) {
     }
     document.write(includes[key]);
 }
+
+function returnHome(prepend) {
+    document.write('<a class="return-home" href="' + prepend + 'index.html">Return to home page</a>')
+}
