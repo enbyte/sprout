@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<h1> Learn: Grade 4 </h1>
+<h3> N1.2: Place-value concepts </h3>
+
+<p> Think about the number 159.
+<br>
+Which digit is worth the <strong>most</strong> in this number and which digit is worth the <strong>least</strong>?
+Remember, the 1 is not the same as 9 because of place value.
+159 is the same thing as 100 + 50 + 9.
+When we write numbers, we write the biggest digit and then the next smallest digit.
+<br>
+Each place that a number can be in has a different value. 
+The rightmost digit counts ones.
+The next digit counts tens.
+Since there are only 10 digits, and one is zero, putting a ten in the ones digit wouldn't work.
+Ten ones is the same thing as one ten.
+</p>
+
+{% 
+    include miniquiz.html 
+        id=0
+        question="Which digit is worth the most in this number?"
+        correctIndex=0
+        opt0="eighty thousand"
+        opt1="2"
+        opt2="3"
+        opt3="4"
+        response0="Correct! The 1 is the most significant digit."
+        response1="Incorrect. The 1 is the most significant digit."
+        response2="Incorrect. The 1 is the most significant digit."
+        response3="Incorrect. The 1 is the most significant digit."
+
+ %}
+
+ {% 
+    include miniquiz.html 
+        id=1
+        question="Which digit is worth the most in this number?"
+        correctIndex=0
+        opt0="12"
+        opt1="2"
+        opt2="3"
+        opt3="4"
+        response0="Correct! The 1 is the most significant digit."
+        response1="Incorrect. The 1 is the most significant digit."
+        response2="Incorrect. The 1 is the most significant digit."
+        response3="Incorrect. The 1 is the most significant digit."
+
+ %}
+
+{% include math-notice.html %}
+{% include return_math.html %}

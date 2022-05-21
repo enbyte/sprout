@@ -24,5 +24,18 @@
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    font-family: Calibri, Arial, sans-serif;
+    font-family: 'Ubuntu', Arial, sans-serif;
 }
+
+.math-notice {
+    font-size: 10px;
+    color: #828282;
+}
+
+.miniquiz {
+    border-radius: 15px;
+    background-color: #CCCCCC;
+    padding: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
