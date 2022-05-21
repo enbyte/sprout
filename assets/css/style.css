@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6, p, button, a{
 .miniquiz {
     background-color: #CCCCCC;
     padding: 15px;
+    border-style: solid;
 }
 
 .miniquiz button p {
@@ -54,15 +55,23 @@ h1, h2, h3, h4, h5, h6, p, button, a{
 .definition {
     background-color: #CCCCCC;
     padding: 15px;
+    border-style: solid;
 }
 
 .definition p {
     margin: 5px;
 }
 
-.grade {
+.grade-list {
+    margin-bottom: 15px;
+}
+
+.grade p {
     padding: 0px;
-    line-height: 0px;
+}
+
+.equation-table {
+    border:1px solid black;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
