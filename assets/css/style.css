@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-body {
-    background-color: rgb(19, 119, 2);
+html body {
+    background: radial-gradient(circle, rgba(30,156,34,1) 0%, rgba(97,182,56,1) 35%, rgba(29,129,81,1) 100%);
+    background-attachment: fixed;
 }
 
 pre {
@@ -14,6 +15,8 @@ pre {
     background-color: #b0ffbd;
     border-radius: 15px;
     max-width: 600px;
+    overscroll-behavior-y: auto;
+    overflow-y: scroll;
 }
 
 .header h1, h2 {
