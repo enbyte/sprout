@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <script src="scripts/include.js" charset="utf-8"></script>
-        <title>Sprout: Grow STEM Knowledge</title>
-    </head>
-    <body>
-        <div class="container">
-            <script>insert('header')</script>
-            <p>Choose from one of these skills to start practicing:</p>
-            <script>insert('skill-list')</script>
-            <script>insert('footer')</script>
-        </div>
-    </body>
-</html>
+---
+layout: default
+---
+<p>Choose from one of these skills to start practicing:</p>
+{% include skill-list.html %}
