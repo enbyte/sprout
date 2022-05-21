@@ -1,6 +1,24 @@
 <div class="miniquiz">
+    <div>
+        <p style="font-size: 12px">Self Check</p>
+        <p> {{ include.question }} </p>
+    </div>
+    <div>
+        <button id="miniquiz_button_0_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(0)"> {{ include.opt0 }} </button>
+    </div>
+    <div>
+        <button id="miniquiz_button_1_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(1)"> {{ include.opt1 }} </button>
+    </div>
+    <div>
+        <button id="miniquiz_button_2_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(2)"> {{ include.opt2 }} </button>
+    </div>
+    <div>
+        <button id="miniquiz_button_3_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(3)"> {{ include.opt3 }} </button>
+    </div>
+    <p id="response_{{ include.id }}"></p>
+
+
     <script>
-        var selected = 0;
         const correct_index_{{ include.id | jsonify }} = {{ include.correctIndex | jsonify }};
         const options_{{ include.id | jsonify }} = [
             {{ include.opt0 | jsonify }},
@@ -18,26 +36,14 @@
         for (i in responses_{{ include.id | jsonify }}) {
             console.log("{{ include.id | jsonify }}: " + responses_{{ include.id | jsonify }}[i])
         }
-        function setSelected(num) {
-            selected = num;
+        function setSelected_{{ include.id | jsonify }}(num) {
+            const button_id = "miniquiz_button_" + num + "_{{ include.id | jsonify }}";
+            if (num == correct_index_{{ include.id | jsonify }}) {
+                document.getElementById(button_id).style.backgroundColor = "green";
+            } else {
+                document.getElementById(button_id).style.backgroundColor = "red";
+            }
             document.getElementById("response_" + {{ include.id | jsonify }}).innerHTML = responses_{{ include.id | jsonify }}[num];
         }
     </script>
-    <div>
-        <p> {{ include.question }} </p>
-    </div>
-    <div>
-        <button onclick="setSelected(0)"> {{ include.opt0 }} </button>
-    </div> 
-    <div>
-        <button onclick="setSelected(1)"> {{ include.opt1 }} </button>
-    </div> 
-    <div>
-        <button onclick="setSelected(2)"> {{ include.opt2 }} </button>
-    </div> 
-    <div>
-        <button onclick="setSelected(3)"> {{ include.opt3 }} </button>
-    </div>
-    <p id="response_{{ include.id }}"></p>
-    
 </div>

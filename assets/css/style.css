@@ -45,16 +45,38 @@ h1, h2, h3, h4, h5, h6, p, button, a, pre {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.header .logo, .header .title-subtitle {
+    float: left;
+}
+
 .math-notice {
     font-size: 10px;
     color: #828282;
 }
 
 .miniquiz {
-    border-radius: 15px;
     background-color: #CCCCCC;
-    padding: 5px;
+    padding: 15px;
 }
+
+.miniquiz button p {
+    margin: 5px;
+}
+
+.definition {
+    background-color: #CCCCCC;
+    padding: 15px;
+}
+
+.definition p {
+    margin: 5px;
+}
+
+.grade {
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 .code {
     font-family: monospace;
@@ -73,4 +95,3 @@ iframe {
     height: 500px;
     background-color: white;
 }
-

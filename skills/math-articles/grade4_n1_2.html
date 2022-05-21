@@ -5,49 +5,47 @@ layout: default
 <h1> Learn: Grade 4 </h1>
 <h3> N1.2: Place-value concepts </h3>
 
-<p> Think about the number 159.
-<br>
-Which digit is worth the <strong>most</strong> in this number and which digit is worth the <strong>least</strong>?
-Remember, the 1 is not the same as 9 because of place value.
-159 is the same thing as 100 + 50 + 9.
-When we write numbers, we write the biggest digit and then the next smallest digit.
-<br>
-Each place that a number can be in has a different value. 
-The rightmost digit counts ones.
-The next digit counts tens.
-Since there are only 10 digits, and one is zero, putting a ten in the ones digit wouldn't work.
-Ten ones is the same thing as one ten.
-</p>
+<p>Let's think about the number 159.</p>
+<p>Which digit in this number is worth the <strong>most</strong> and which digit is worth the <strong>least</strong>?</p>
 
-{% 
-    include miniquiz.html 
+{%
+    include miniquiz.html
         id=0
         question="Which digit is worth the most in this number?"
-        correctIndex=0
-        opt0="eighty thousand"
-        opt1="2"
-        opt2="3"
-        opt3="4"
-        response0="Correct! The 1 is the most significant digit."
-        response1="Incorrect. The 1 is the most significant digit."
-        response2="Incorrect. The 1 is the most significant digit."
-        response3="Incorrect. The 1 is the most significant digit."
-
+        correctIndex=1
+        opt0="0"
+        opt1="1"
+        opt2="5"
+        opt3="9"
+        response0="There is no 0 in the number. Try again!"
+        response1="Correct! The 1 is worth the most in this number."
+        response2="Although 5 is greater than 1, in this number the 5 is not worth the most. Try again!"
+        response3="Although 9 is greater than both 5 and 1, in this number the 9 is not worth the most. Try again!"
  %}
 
- {% 
-    include miniquiz.html 
+<p>To answer this question, we have to break down what 159 means. This number is the same as 100 + 50 + 9. We see that the 1 in the number comes from the 100 and the 9 comes from the 9. The 1 in the number is worth more than the 9 because of its <em>place value</em>.</p>
+
+{%
+    include definition.html
+        term="Place Value"
+        definition="The position of a digit that determines how much it is worth."
+%}
+
+<p>When we write numbers, we start with the digit worth the most and move to the digit worth the least. For example, when we write 123, we first write the 1, then the 2, then the 3. The 1 stands for 100, the 2 for 20, and the 3 for 3. The 1 is in the <em>hundreds</em> place, the 2 in the <em>tens</em> place, and the 3 in the <em>ones</em> place.</p>
+
+ {%
+    include miniquiz.html
         id=1
-        question="Which digit is worth the most in this number?"
-        correctIndex=0
-        opt0="12"
-        opt1="2"
-        opt2="3"
-        opt3="4"
-        response0="Correct! The 1 is the most significant digit."
-        response1="Incorrect. The 1 is the most significant digit."
-        response2="Incorrect. The 1 is the most significant digit."
-        response3="Incorrect. The 1 is the most significant digit."
+        question="What does 3195 break down to?"
+        correctIndex=3
+        opt0="3 + 10 + 900 + 5000"
+        opt1="3 + 1 + 9 + 5"
+        opt2="300 + 100 + 90 + 5"
+        opt3="3000 + 100 + 90 + 5"
+        response0="This adds up to 5913, which is the number in reverse order. Try again!"
+        response1="These are the digits of the number, but not what the number breaks down to. Try again!"
+        response2="Almost correct, but this adds up to 495. Try again!"
+        response3="Correct! The number has 3 in the thousands place, 1 in the hundreds place, 9 in the tens place, and 5 in the ones place."
 
  %}
 
