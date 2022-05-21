@@ -3,17 +3,25 @@
         <p style="font-size: 12px">Self Check</p>
         <p> {{ include.question }} </p>
     </div>
+    <div id="answer-buttons">
+        <table>
+            <tr>
     <div>
-        <button id="miniquiz_button_0_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(0)"> {{ include.opt0 }} </button>
+        <button class="quiz-buttons" id="miniquiz_button_0_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(0)"> {{ include.opt0 }} </button>
     </div>
     <div>
-        <button id="miniquiz_button_1_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(1)"> {{ include.opt1 }} </button>
+        <button class="quiz-buttons" id="miniquiz_button_1_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(1)"> {{ include.opt1 }} </button>
+    </div>
+    </tr>
+    <tr>
+    <div>
+        <button class="quiz-buttons" id="miniquiz_button_2_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(2)"> {{ include.opt2 }} </button>
     </div>
     <div>
-        <button id="miniquiz_button_2_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(2)"> {{ include.opt2 }} </button>
+        <button class="quiz-buttons"    id="miniquiz_button_3_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(3)"> {{ include.opt3 }} </button>
     </div>
-    <div>
-        <button id="miniquiz_button_3_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(3)"> {{ include.opt3 }} </button>
+    </tr>
+    </table>
     </div>
     <p id="response_{{ include.id }}"></p>
 
