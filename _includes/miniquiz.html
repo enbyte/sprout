@@ -4,22 +4,30 @@
         <p> {{ include.question }} </p>
     </div>
     <div id="answer-buttons">
-        <table>
+        <table class="quiz-table">
             <tr>
+    <td>
     <div>
         <button class="quiz-buttons" id="miniquiz_button_0_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(0)"> {{ include.opt0 }} </button>
     </div>
+    </td>
+    <td>
     <div>
         <button class="quiz-buttons" id="miniquiz_button_1_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(1)"> {{ include.opt1 }} </button>
     </div>
+    </td>
     </tr>
     <tr>
+    <td>
     <div>
         <button class="quiz-buttons" id="miniquiz_button_2_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(2)"> {{ include.opt2 }} </button>
     </div>
+    </td>
+    <td>
     <div>
         <button class="quiz-buttons"    id="miniquiz_button_3_{{ include.id | jsonify }}" onclick="setSelected_{{ include.id | jsonify }}(3)"> {{ include.opt3 }} </button>
     </div>
+    </td>
     </tr>
     </table>
     </div>
