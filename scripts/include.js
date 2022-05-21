@@ -2,8 +2,10 @@ function insert(key) {
     const includes = {
         'header' : `
         <div class="header">
-            <h1>sprout</h1><h2>Fostering STEM knowledge in disadvantaged communities</h2>
-        </div>`,
+            <h1 class="title">sprout</h1>
+            <h2>Fostering STEM knowledge</h2>
+        </div>
+        <hr/>`,
 
         'footer' : `
         <div class="footer">
@@ -13,9 +15,9 @@ function insert(key) {
 
         'skill-list' : `
         <ul>
-         <li>Math</li>
-         <li>Science</li>
-         <li>Milk</li>
+         <li class="skill-button"><a href="skills/math.html">Math</a></li>
+         <li class="skill-button"><a href="failed.html">Science</a></li>
+         <li class="skill-button"><a href="failed.html">Programming</a></li>
         </ul>`
     }
     document.write(includes[key]);
