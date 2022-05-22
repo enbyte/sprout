@@ -5,13 +5,22 @@ layout: default
 <h1> Play: Programming </h1>
 <h3> Live HTML Workspace </h3>
 
-{%
-    include workspace.html
-        default="
-<!-- Type HTML and CSS here to run it! -->
-<!-- The window to the left will update in real time. -->
-
-<p>Test</p>"
-%}
+{% include workspace.html default="<p>Here is some text. </p>
+        <p> Here is some <b> bold </b> text.</p>
+        <p> Here is some <i> italic </i> text.</p>
+        <p class=&quot;color&quot;> Here is some colored text.</p> 
+        
+        <style>
+        
+            .color {
+                color: red;
+            }
+        </style>
+        
+        <p id=&quot;text&quot;> Text goes here. </p>
+        
+        <script>
+            document.getElementById(&quot;text&quot;).innerHTML = &quot;JavaScript works too!&quot;
+        </script>"%}
 
 {% include return_prog.html %}
