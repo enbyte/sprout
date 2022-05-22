@@ -1,6 +1,6 @@
 <div class="miniquiz">
     <div>
-        <p style="font-size: 12px">Self Check</p>
+        <p style="font-size: 12px">Test your understanding</p>
         <p> {{ include.question }} </p>
     </div>
     <div id="answer-buttons">
@@ -49,15 +49,25 @@
             {{ include.response3 | jsonify }}
         ];
 
-        for (i in responses_{{ include.id | jsonify }}) {
-            console.log("{{ include.id | jsonify }}: " + responses_{{ include.id | jsonify }}[i])
+        const buttons_{{ include.id | jsonify }} = [            document.getElementById("miniquiz_button_0_{{ include.id | jsonify }}"),
+            document.getElementById("miniquiz_button_1_{{ include.id | jsonify }}"),
+            document.getElementById("miniquiz_button_2_{{ include.id | jsonify }}"),
+            document.getElementById("miniquiz_button_3_{{ include.id | jsonify }}")
+        ];
+        for (const button of buttons_{{ include.id | jsonify }}) {
+            button.style.borderStyle = "solid";
+            button.style.borderColor = button.style.backgroundColor;
+            button.style.borderWidth = "3px";
         }
         function setSelected_{{ include.id | jsonify }}(num) {
-            const button_id = "miniquiz_button_" + num + "_{{ include.id | jsonify }}";
+            for (const button of buttons_{{ include.id | jsonify }}) {
+                button.style.borderColor = button.style.backgroundColor;
+            }
+            buttons_{{ include.id | jsonify }}[num].style.borderColor = "black";
             if (num == correct_index_{{ include.id | jsonify }}) {
-                document.getElementById(button_id).style.backgroundColor = "green";
+                buttons_{{ include.id | jsonify }}[num].style.backgroundColor = "green";
             } else {
-                document.getElementById(button_id).style.backgroundColor = "red";
+                buttons_{{ include.id | jsonify }}[num].style.backgroundColor = "red";
             }
             document.getElementById("response_" + {{ include.id | jsonify }}).innerHTML = responses_{{ include.id | jsonify }}[num];
         }

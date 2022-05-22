@@ -5,6 +5,13 @@ layout: default
 <h1> Play: Programming </h1>
 <h3> Live HTML Workspace </h3>
 
-{% include workspace.html %}
+{%
+    include workspace.html
+        default="
+<!-- Type HTML and CSS here to run it! -->
+<!-- The window to the left will update in real time. -->
+
+<p>Test</p>"
+%}
 
 {% include return_prog.html %}

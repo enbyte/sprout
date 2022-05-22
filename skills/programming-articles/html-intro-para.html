@@ -8,7 +8,7 @@ layout: default
 {% include prog_notice.html %}
 <p>The most essential part of a webpage is its text. You might not notice it, but almost every website you visit is mostly made out of text. Today, we're going to learn how to write code that displays text on your very own website.</p>
 
-<p>To add text to a webpage, we use the &lt;p> tag. In HTML (the language of the web), every piece of code starts with an opening tag and ends with a closing tag. A closing tag is the same as the opening tag except there is a slash in it, like this: &lt;/p>.</p>
+<p>To add text to a webpage, we use the <code>&lt;p></code> tag. In HTML (the language of the web), every piece of code starts with an opening tag and ends with a closing tag. A closing tag is the same as the opening tag except there is a slash in it, like this: <code>&lt;/p>.</code></p>
 
 {%
     include miniquiz.html
@@ -38,6 +38,6 @@ layout: default
 <pre>&lt;p>My name is ...&lt;/p><br/>&lt;p>My favorite food is ...&lt;/p></pre>
 
 
-{% include workspace.html %}
+{% include workspace.html default="<p>Write here</p>"%}
 
 {% include return_prog.html %}
