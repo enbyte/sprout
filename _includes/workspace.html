@@ -1,9 +1,5 @@
 <div class="workspace">
-    <textarea id="codespace" class="code" oninput="reload()">
-    <!-- Type HTML and CSS here to run it! -->
-
-    <!-- The window to the left will update in real time. -->
-    </textarea>
+    <textarea id="codespace" class="code" oninput="reload()">{{ include.default }}</textarea>
     <iframe id="resultframe"></iframe>
 
     <button onclick="save()">Save code</button>
