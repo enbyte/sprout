@@ -1,5 +1,5 @@
 <div class="workspace">
-    <textarea id="codespace" class="code" oninput="reload()">{{ include.default }}</textarea>
+    <textarea id="codespace" spellcheck="false" class="code" oninput="reload()">{{ include.default }}</textarea>
     <iframe id="resultframe"></iframe>
 
     <button onclick="save()">Save code</button>
@@ -21,6 +21,29 @@
             text.value = localStorage.getItem("code");
             reload();
         }
+
+        // https://stackoverflow.com/questions/6140632/how-to-handle-tab-in-textarea
+        document.querySelector("textarea").addEventListener('keydown',function(e) {
+    if(e.keyCode === 9) { // tab was pressed
+        // get caret position/selection
+        var start = this.selectionStart;
+        var end = this.selectionEnd;
+
+        var target = e.target;
+        var value = target.value;
+
+        // set textarea value to: text before caret + tab + text after caret
+        target.value = value.substring(0, start)
+                    + "    "
+                    + value.substring(end);
+
+        // put caret at right position again (add one for the tab)
+        this.selectionStart = this.selectionEnd = start + 4;
+
+        // prevent the focus lose
+        e.preventDefault();
+    }
+},false);
     </script>
 
 </div>
